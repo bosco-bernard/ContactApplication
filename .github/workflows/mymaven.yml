@@ -4,9 +4,9 @@
 name: myaction
 on: 
   push:
-    branches: [ master ]
+    branches: [ master , test1 ]
   pull_request:
-    branches: [ master ]
+    branches: [ master ,test1 ]
 jobs:
   run_tests:
     runs-on: ubuntu-latest
