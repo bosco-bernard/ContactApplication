@@ -36,8 +36,8 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public User getUserById(int id) {
-		//final int uid = id;
-		String sql = "SELECT * FROM user WHERE id=" + id;
+		final int uid = id;
+		String sql = "SELECT * FROM user WHERE id=" + uid;
 	    ResultSetExtractor<User> extractor = new ResultSetExtractor<User>() {
 
 			public User extractData(ResultSet rs) throws SQLException, DataAccessException {
@@ -47,7 +47,7 @@ public class UserDAOImpl implements UserDAO {
 					String address = rs.getString("address");
 					String phone = rs.getString("phone");
 					String email = rs.getString("email");
-					return new User(id, name, address, phone, email);
+					return new User(uid, name, address, phone, email);
 				}
 				return null;
 			}
