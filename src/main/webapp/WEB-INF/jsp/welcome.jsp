@@ -8,6 +8,7 @@
 <title>Create/Edit Contact</title>
 </head>
 <body>
+<h3><a href="aboutus">About Us</a></h3>
 	 <div align="center">
             <h1>Contact List</h1>
             <h3><a href="newUser">New Contact</a></h3>

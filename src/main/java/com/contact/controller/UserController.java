@@ -68,4 +68,10 @@ public class UserController {
 	    return new ModelAndView("redirect:/welcome");
 	}
 	
+	@RequestMapping(value = "/aboutus", method = RequestMethod.GET)
+	public ModelAndView deleteContact(ModelAndView mv) {	   
+	    mv.setViewName("aboutUsPage");
+		return mv;
+	}
+	
 }
