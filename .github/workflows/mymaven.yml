@@ -6,7 +6,7 @@ on:
   push:
     branches: [ master , aboutFeatureMerge ]
   pull_request:
-    branches: [ master ,aboutFeatureMerge ]
+    branches: [ master , aboutFeatureMerge ]
 jobs:
   run_tests:
     runs-on: ubuntu-latest
