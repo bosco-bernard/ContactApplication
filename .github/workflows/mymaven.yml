@@ -2,7 +2,7 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
 name: myaction
-on: 
+on:
   push:
     branches: [ master , aboutFeatureMerge ]
   pull_request:
@@ -21,6 +21,6 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}          
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml
