@@ -5,9 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ master , aboutFeatureMerge , test]
+    branches: [ master ]
   pull_request:
-    branches: [ master , aboutFeatureMerge , test]
+    branches: [ master ]
 
 jobs:
   build:
