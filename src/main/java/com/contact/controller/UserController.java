@@ -74,4 +74,10 @@ public class UserController {
 		return mv;
 	}
 	
+	@RequestMapping(value = "/newFeature", method = RequestMethod.GET)
+	public ModelAndView newFeature(ModelAndView mv) {	   
+	    mv.setViewName("newFeaturePage");
+		return mv;
+	}
+	
 }

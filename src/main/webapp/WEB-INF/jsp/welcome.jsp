@@ -37,5 +37,7 @@
                 </c:forEach>             
             </table>
         </div>
+        <br>
+       <h3><a href="newFeature">About Us</a></h3> 
 </body>
 </html>
