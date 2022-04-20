@@ -9,6 +9,7 @@ on:
     branches: [ mergeAboutFeature , newFeature , testFeature ]
 jobs:
   run_tests:
+    name: Test for the branch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
