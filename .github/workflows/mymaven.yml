@@ -29,18 +29,13 @@ jobs:
     needs: run_tests
     steps:      
       - name: Raise PR
-        id: demo-1
-        uses: peter-evans/create-pull-request@v3
-        with:    
-          branch: ${{ github.ref }}
-          base: master
-          title: demo for auto pr          
-          body: This is to show automatic PR creation
-          token: ${{ secrets.APPROVE }}
-      - name: Approve Pull Request
-        uses: juliangruber/approve-pull-request-action@v1
+        uses: repo-sync/pull-request@v2
         with:
-            github-token: ${{ secrets.APPROVE }}
-            number:  ${{ steps.demo-1.outputs.pull-request-number }}
+          source_branch: "${{ github.ref }}"
+          destination_branch: "master"
+          pr_title: "Pulling ${{ github.ref }} into master"
+          pr_body: "This is to show automatic PR creation"        
+          pr_label: "automated-pr"        
+          github_token: ${{ secrets.APPROVE }}
      
  
