@@ -28,6 +28,7 @@ jobs:
   automerge:
     name: Auto merge after successful checks
     runs-on: ubuntu-latest
+    needs: run_tests
     steps:       
       - uses: reitermarkus/automerge@v2
         with:
