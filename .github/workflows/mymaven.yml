@@ -4,11 +4,12 @@
 name: myaction
 on:
   push:
-    branches: [ master , aboutFeatureMerge ]
+    branches: [ mergeAboutFeature , aboutFeature , newFeature , testFeature ]
   pull_request:
-    branches: [ master , aboutFeatureMerge ]
+    branches: [ mergeAboutFeature , aboutFeature ,newFeature , testFeature ]
 jobs:
   run_tests:
+    name: Test for the branch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
@@ -24,4 +25,11 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml
-
+  automerge:
+    name: Auto merge after successful checks
+    runs-on: ubuntu-latest
+    needs: run_tests
+    steps:
+      - uses: "pascalgn/automerge-action@v0.15.2"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
