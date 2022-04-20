@@ -32,13 +32,10 @@ jobs:
         id: demo-1
         uses: peter-evans/create-pull-request@v3
         with:    
-          branch: "auto-pr-branch"
-          base: main
-          title: demo for auto pr
-          committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
-          author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
-          body:
-            This is to show automatic PR creation
+          branch: ${{ github.ref }}
+          base: master
+          title: demo for auto pr          
+          body: This is to show automatic PR creation
           token: ${{ secrets.APPROVE }}
       - name: Approve Pull Request
         uses: juliangruber/approve-pull-request-action@v1
