@@ -30,6 +30,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: run_tests
     steps:
-      - uses: "pascalgn/automerge-action@v0.15.2"
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: reitermarkus/automerge@v2
+        with:
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
+          merge-method: rebase
+          do-not-merge-labels: never-merge
+          pull-request: ${{ github.event.inputs.pull-request }}
+          dry-run: true
