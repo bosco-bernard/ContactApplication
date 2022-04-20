@@ -4,7 +4,7 @@
 name: myaction
 on:
   push:
-    branches: [ master , mergeAboutFeature , aboutFeature , newFeature , testFeature ]
+    branches: [ mergeAboutFeature , aboutFeature , newFeature , testFeature ]
   pull_request:
     branches: [ mergeAboutFeature , aboutFeature ,newFeature , testFeature ]
 jobs:
