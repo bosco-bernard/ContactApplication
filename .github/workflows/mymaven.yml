@@ -6,7 +6,7 @@ on:
   push:
     branches: [ master , mergeAboutFeature , aboutFeature , newFeature , testFeature ]
   pull_request:
-    branches: [ master , mergeAboutFeature , aboutFeature ,newFeature , testFeature ]
+    branches: [ mergeAboutFeature , aboutFeature ,newFeature , testFeature ]
 jobs:
   run_tests:
     name: Test for the branch
