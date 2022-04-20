@@ -4,9 +4,9 @@
 name: myaction
 on:
   push:
-    branches: [ master , mergeAboutFeature , newFeature , testFeature ]
+    branches: [ mergeAboutFeature , newFeature , testFeature ]
   pull_request:
-    branches: [ master , mergeAboutFeature , newFeature , testFeature ]
+    branches: [ mergeAboutFeature , newFeature , testFeature ]
 jobs:
   run_tests:
     runs-on: ubuntu-latest
