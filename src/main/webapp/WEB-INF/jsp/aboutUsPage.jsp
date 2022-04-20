@@ -10,6 +10,7 @@
 	<div>
   <h1>About Us Page</h1>
   <p>A Spring MVC project for contact application</p>
+  <h2>This is about us page</h2>
 </div>
 </body>
 </html>
