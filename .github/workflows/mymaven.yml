@@ -27,15 +27,8 @@ jobs:
     name: Auto merge after successful checks
     runs-on: ubuntu-latest
     steps:
-      - name: Raise PR
-        id: demo-1
-        uses: peter-evans/create-pull-request@v4
-        with:
-          branch: "auto-pr-branch"
-          base: master
-          title: "demo for auto pr"
-          body: This is to show automatic PR creation
-          token: ${{ secrets.APPROVE }}
-          labels: automate-pr
-     
- 
+      - id: automerge
+        name: Merge Pull Request
+        uses: "pascalgn/automerge-action@v0.15.2"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }} 
