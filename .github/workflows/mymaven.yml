@@ -31,11 +31,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Raise PR
         id: demo-1
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           branch: ${{ github.ref }}
           base: master
-          title: "demo for auto pr"
+          title: 'demo for auto pr'
           body: This is to show automatic PR creation
           token: ${{ secrets.APPROVE }}
           labels: automate-pr
