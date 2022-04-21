@@ -11,11 +11,10 @@
   <h1>About Us Page</h1>
   <p>A Spring MVC project for contact application</p>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<table>
+	<thead>
+		<tr>  </tr>
+	</thead>
+</table>
 </body>
 </html>
