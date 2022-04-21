@@ -11,6 +11,14 @@
 	<h2>This is a contact page</h2>
 	<h3>test purpose</h3>
 	
+<h3>Cum sociis natoque penatibus et magnis dis 
+parturient montes nascetur ridiculus mus</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit. Aenean commodo ligula eget dolor. Aenean massa. 
+Cum sociis natoque penatibus et magnis dis parturient 
+montes, nascetur ridiculus mus. Donec quam felis, 
+ultricies nec, pellentesque eu, pretium quis, sem.</p>
 
 	
 
