@@ -1,14 +1,14 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: myaction
+name: Junit Test Case
 on:
   push:
-    branches: [ master , aboutFeatureMerge ]
-  pull_request:
-    branches: [ master , aboutFeatureMerge ]
+    branches: [ master , mergeAboutFeature , aboutFeature , newFeature , contactFeature , testFeature ]
+ 
 jobs:
   run_tests:
+    name: Test for the branch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
@@ -24,4 +24,3 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml
-
