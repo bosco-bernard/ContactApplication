@@ -1,0 +1,14 @@
+name: MyMergePullRequest
+on:
+  pull_request:
+     branches: [ master , mergeAboutFeature , aboutFeature , newFeature , contactFeature , testFeature ]
+jobs:
+  automerge:
+    name: Auto merge after successful checks
+    runs-on: ubuntu-latest
+    steps:
+      - id: automerge
+        name: Merge Pull Request
+        uses: "pascalgn/automerge-action@v0.15.2"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
