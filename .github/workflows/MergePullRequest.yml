@@ -1,29 +1,14 @@
 name: MergePullRequest
 on:
   pull_request:
-    branches: [ master , mergeAboutFeature , aboutFeature , newFeature , contactFeature , testFeature ]
-    types:
-      - labeled
-      - unlabeled
-      - synchronize
-      - opened
-      - edited
-      - ready_for_review
-      - reopened
-      - unlocked
-  pull_request_review:
-    types:
-      - submitted
-  check_suite:
-    types:
-      - completed
-  status: {}
+     branches: [ master , mergeAboutFeature , aboutFeature , newFeature , contactFeature , testFeature ]
 jobs:
-  merge_auto:
+  automerge:
     name: Auto merge after successful checks
     runs-on: ubuntu-latest
     steps:
+      - id: automerge
         name: Merge Pull Request
         uses: "pascalgn/automerge-action@v0.15.2"
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
