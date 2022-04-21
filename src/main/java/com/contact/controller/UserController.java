@@ -74,4 +74,10 @@ public class UserController {
 		return mv;
 	}
 	
+	@RequestMapping(value = "/contactus", method = RequestMethod.GET)
+	public ModelAndView contact(ModelAndView mv) {	   
+	    mv.setViewName("contactus");
+		return mv;
+	}
+	
 }
