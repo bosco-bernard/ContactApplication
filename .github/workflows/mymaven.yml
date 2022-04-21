@@ -33,7 +33,7 @@ jobs:
         with:
           branch: ${{ github.ref }}
           base: master
-          title: 'demo for auto pr'
+          title: demo for auto pr
           body: This is to show automatic PR creation
           token: ${{ secrets.APPROVE }}
           labels: automate-pr
