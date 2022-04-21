@@ -31,8 +31,6 @@ jobs:
         id: demo-1
         uses: peter-evans/create-pull-request@v4
         with:
-          branch: ${{ github.ref }}
-          base: master
           title: demo for auto pr
           body: This is to show automatic PR creation
           token: ${{ secrets.APPROVE }}
