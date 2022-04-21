@@ -18,7 +18,7 @@ on:
       - completed
   status: {}
 jobs:
-  automerge:
+  merge_auto:
     name: Auto merge after successful checks
     runs-on: ubuntu-latest
     steps:
