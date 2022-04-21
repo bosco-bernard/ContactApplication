@@ -24,4 +24,3 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml
-  
