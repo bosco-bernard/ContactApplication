@@ -57,8 +57,8 @@ class UserDAOTest {
 
 	@Test
 	void testDelete() {
-		//int id = 2;
-		//int res = dao.delete(id);
+//		int id = 2;
+//		int res = dao.delete(id);
 		int res = 1;
 		assertTrue(res > 0);
 	}
