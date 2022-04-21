@@ -12,8 +12,12 @@
   <p>A Spring MVC project for contact application</p>
 </div>
 <div>
-  <h3>hello</h3>
+  <h1>About Us Page</h1>
+  <p>A Spring MVC project for contact application</p>
 </div>
-
+<div>
+  <h1>About Us Page</h1>
+  <p>A Spring MVC project for contact application</p>
+</div>s
 </body>
 </html>
