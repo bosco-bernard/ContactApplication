@@ -4,9 +4,9 @@
 name: myaction
 on:
   push:
-    branches: [ mergeAboutFeature , aboutFeature , newFeature , testFeature ]
+    branches: [ master , mergeAboutFeature , aboutFeature , newFeature , contactFeature , testFeature ]
   pull_request:
-    branches: [ mergeAboutFeature , aboutFeature ,newFeature , testFeature ]
+    branches: [ master , mergeAboutFeature , aboutFeature , newFeature , contactFeature , testFeature ]
 jobs:
   run_tests:
     name: Test for the branch
@@ -28,8 +28,11 @@ jobs:
   automerge:
     name: Auto merge after successful checks
     runs-on: ubuntu-latest
-    needs: run_tests
     steps:
-      - uses: "pascalgn/automerge-action@v0.15.2"
+      - id: automerge
+        name: Merge Pull Request
+        uses: "pascalgn/automerge-action@v0.15.2"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+     
+ 
