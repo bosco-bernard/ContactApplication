@@ -1,4 +1,4 @@
-name: MyMergePullRequest
+name: MergePullRequest
 on:
   pull_request:
      branches: [ master , mergeAboutFeature , aboutFeature , newFeature , contactFeature , testFeature ]
