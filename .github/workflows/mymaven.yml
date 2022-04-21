@@ -26,15 +26,18 @@ jobs:
   automerge:
     name: Auto merge after successful checks
     runs-on: ubuntu-latest
-    steps:      
+    steps:
+      - name: checking out code
+        uses: actions/checkout@v2
       - name: Raise PR
-        uses: repo-sync/pull-request@v2
+        id: demo-1
+        uses: peter-evans/create-pull-request@v3
         with:
-          source_branch: "${{ github.ref }}"
-          destination_branch: "master"
-          pr_title: "Pulling ${{ github.ref }} into master"
-          pr_body: "This is to show automatic PR creation"        
-          pr_label: "automated-pr"        
-          github_token: ${{ secrets.APPROVE }}
+          branch: "auto-pr-branch"
+          base: master
+          title: "demo for auto pr"
+          body: This is to show automatic PR creation
+          token: ${{ secrets.APPROVE }}
+          label: automate-pr
      
  
