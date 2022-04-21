@@ -32,7 +32,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           branch: master
-          base: ${{ github.ref }
+          base: ${{ github.ref }}
           title: demo for auto pr
           body: This is to show automatic PR creation
           token: ${{ secrets.APPROVE }}
